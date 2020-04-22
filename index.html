@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Форма опроса</title>
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 id="title" class="text-center">Оценка службы такси</h1>
+      <p id="description" class="description text-center">
+        Здравствуйте, потратьте, пожалуйста, несколько минут своего времени на заполнение следующей анкеты.
+      </p>
+    </header>
+    <form id="survey-form">
+      <div class="form-group">
+        <label id="name-label" for="name">Имя</label>
+        <input 
+          type="text" 
+          name="name" 
+          id="name" 
+          class="form-control" 
+          placeholder="Введите ваше имя" 
+          required />
+      </div>
+      <div class="form-group">
+        <label id="email-label" for="email">Электронная почта</label>
+        <input 
+        type="email" 
+        name="email" 
+        id="email" 
+        class="form-control" 
+        placeholder="Введите ваш email" 
+        required />
+      </div>
+      <div class="form-group">
+        <label id="number-label" for="number">
+          Возраст<span class="clue"></span>
+        </label>
+        <input
+          type="number"
+          name="age"
+          id="number"
+          min="16"
+          max="100"
+          class="form-control"
+          placeholder="Age"
+        />
+      </div>
+      <div class="form-group">
+        <p>В какое время дня Вы, больще всего, пользуетесь услугами такси?</p>
+        <select id="dropdown" name="role" class="form-control" required>
+          <option disabled selected value>Выберите один из пунктов списка</option>
+          <option value="morning">Утром</option>
+          <option value="lunch">В обед</option>
+          <option value="day">Днем</option>
+          <option value="evening">Вечером</option>
+          <option value="night">Ночью</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <p> Вы бы порекомендовали нашу службу такси другу?</p>
+        <label>
+          <input 
+          name="user-recommend" 
+          value="definitely" 
+          type="radio" 
+          class="input-radio" 
+          chacked />Определенно
+        </label>
+        <label>
+          <input 
+            name="user-recommend" 
+            value="maybe" 
+            type="radio" 
+            class="input-radio" />Возможно
+        </label>
+        <label>
+          <input 
+            name="user-recommend" 
+            value="not-sure" 
+            type="radio" 
+            class="input-radio" />Не уверен
+        </label>
+      </div>
+
+      <div class="form-group">
+        <p>Как часто вы пользуетесь службой такси?</p>
+        <select id="how-often" name="howoften" class="form-control" required>
+          <option disabled selected value>Выберите один из пунктов списка</option>
+          <option value="everyday">Каждый день</option>
+          <option value="everal-times-a-month">Несколько раз в месяц</option>
+          <option value="once-a-month">Один раз в месяц</option>
+          <option value="several-times-a-year">Несколько раз в год</option>
+          <option value="never">Никогда</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <p>Что бы вы хотели улучшить?
+          <span class="clue"></span>
+        </p>
+
+        <label>
+          <input 
+            name="prefer" 
+            value="price" 
+            type="checkbox" 
+            class="input-checkbox" />Цена
+        </label>
+        <label>
+          <input 
+            name="prefer" 
+            value="waiting-time" 
+            type="checkbox" 
+            class="input-checkbox" />Время ожидания
+        </label>
+        <label>
+          <input 
+            name="prefer" 
+            value="riding-style" 
+            type="checkbox" 
+            class="input-checkbox" />Стиль езды
+        </label>
+        <label>
+          <input 
+            name="prefer" 
+            value="car-quality" 
+            type="checkbox" 
+            class="input-checkbox" />Качество автомобилей
+        </label>
+        <label>
+          <input 
+            name="prefer" 
+            value="mobile-app" 
+            type="checkbox" 
+            class="input-checkbox" />Мобильное приложение
+        </label>
+      </div>
+
+      <div class="form-group">
+        <p>Есть комментарии или предложения?</p>
+        <textarea 
+          id="comments" 
+          class="input-textarea" 
+          name="comment" 
+          placeholder="Введите ваш email">
+        </textarea>
+      </div>
+
+      <div class="form-group">
+        <button type="submit" id="submit" class="submit-button">Отправить</button>
+      </div>
+    </form>
+  </div>
+
+</body>
+
+</html>
